@@ -1,0 +1,40 @@
+{% load static %}
+{% block title %} | Register {% endblock %}
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 offset-md-3">
+                <div class="card shadow-lg">
+                    <img src="{% static 'assets/img/logo-job.png' %}" class="card-img-top" alt="Job Directory">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Register</h4>
+                        <form action="{% url 'register' %}" method="post">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <input type="text" name="first_name" class="form-control" placeholder="Enter Your First Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="last_name" placeholder="Enter Your Last Name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control" placeholder="Enter Your Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="username" placeholder="Enter Your Username" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="password" class="form-control" placeholder="Enter Your Password">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="password2" placeholder="Confirm Your Password" class="form-control">
+                            </div>
+                            <input type="submit" value="Register" class="btn btn-success btn-block">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
