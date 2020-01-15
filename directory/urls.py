@@ -3,6 +3,6 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    path('', views.index, name="directory"),
-    url(r'^(?P<id>\d+)$', views.directory, name="job"),
+    path('', views.index, name="directories"),
+    url(r'^(?P<id>\d+)/$', views.directory, name="directory"),
 ]

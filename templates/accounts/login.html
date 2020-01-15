@@ -1,3 +1,4 @@
+{% extends 'layout.html' %}
 {% load static %}
 {% block title %} | Login {% endblock %}
 {% block content %}
@@ -6,7 +7,7 @@
         <div class="row">
             <div class="col-12 col-md-6 offset-md-3">
                 <div class="card shadow-lg">
-                    <img src="{% static 'assets/img/logo-job.png' %}" class="card-img-top" alt="Job Directory">
+                    <img src="{% static 'assets/img/logo-job.png' %}" class="card-img-top" alt="Job Directory" id="login-register-pic">
                     <div class="card-body">
                         <h4 class="card-title text-center">Login</h4>
                         <form action="{% url 'login' %}" method="post">

@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% block title %} | Home {% endblock %}
+{% block content %}
+{% load static %}
+    <section id="section-header-index">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-12">
+                    <div class="header-box">
+                        <h1 class="text-center">Job Directory</h1>
+                        <p class="lead text-center">Get or post your dream job in seconds</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="mt-5 mb-5">
+                        <img src="{% static 'assets/img/job-01.jpeg' %}" alt="Job Directory">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <h3 class="lead">Here are just a few of our latest jobs</h3>
+{#                    {% for job in jobs %}#}
+{#                        <div class="mt-5 mb-5">#}
+{#                            #}
+{#                        </div>#}
+{#                    {% endfor %}#}
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

@@ -1,9 +1,12 @@
 from django.shortcuts import render
+from directory.models import Directory
 
 def index(request):
-    context = {}
+    jobs = Directory.objects.filter('-created')[0:3]
+    context = {
+        "jobs": jobs
+    }
     return render(request, 'pages/index.html', context)
 
 def contact(request):
-    context = {}
-    return render(request, 'pages/contact.html', context)
+    return render(request, 'pages/contact.html')
