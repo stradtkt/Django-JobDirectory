@@ -3,7 +3,7 @@ from django.contrib import admin
 from .models import Directory, Applied
 
 class DirectoryAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'logo', 'salary')
+    list_display = ('id', 'title', 'logo', 'salary', 'developer_level', 'duration')
     list_display_links = ('id', 'title', 'logo')
     list_filter = ('skills',)
     list_editable = ('developer_level', 'duration')
@@ -18,3 +18,4 @@ class AppliedAdmin(admin.ModelAdmin):
     search_fields = ('user', 'directory', 'created')
 
 admin.site.register(Applied, AppliedAdmin)
+

@@ -2,7 +2,7 @@ from django.shortcuts import render
 from directory.models import Directory
 
 def index(request):
-    jobs = Directory.objects.filter('-created')[0:3]
+    jobs = Directory.objects.all().order_by('-created')[0:3]
     context = {
         "jobs": jobs
     }
