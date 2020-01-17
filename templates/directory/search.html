@@ -70,4 +70,36 @@
         </div>
     </section>
 
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    {% if directories %}
+                        {% for d in directories %}
+                            <div class="card mt-3">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="{{ d.logo }}" alt="{{ d.title }}">
+                                        </div>
+                                        <div class="col-md-4 text-center">
+                                            <h3>{{ d.title }}</h3>
+                                            <p class="text-sm-center">{{ d.description }}</p>
+                                        </div>
+                                        <div class="col-md-4">
+                                             <p class="text-sm-center">Developer Level: {{ d.developer_level }}</p>
+                                             <p class="text-sm-center">Salary: {{ d.salary }}</p>
+                                             <p class="text-sm-center">Duration: {{ d.duration }}</p>
+                                             <p><small>{{ d.created }}</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
 {% endblock %}
