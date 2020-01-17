@@ -1,0 +1,73 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %} | Job Directories Search Results {% endblock %}
+{% block content %}
+
+    <section id="section-header-search">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-12">
+                    <div class="search-header-box text-center">
+                        <form action="{% url 'search' %}">
+                            <div class="form-row">
+                                <div class="col-md-4 mb-3">
+                                    <label for="sr-only">Keywords</label>
+                                    <input type="text" name="keywords" class="form-control" placeholder="Keyword (HTML, CSS, JavaScript)" value="{{ values.keywords }}">
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="sr-only">Title</label>
+                                    <input type="text" name="title" id="title" class="form-control" placeholder="City" value="{{ values.title }}">
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="sr-only">Salary</label>
+                                    <select name="state" class="form-control">
+                                        <option selected="true" disabled="true">Salary(All)</option>
+                                        {% for key, value in salary_of_job.items %}
+                                            <option value="{{ key }}" {% if key == values.salary %} selected {% endif %}>{{ value }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="sr-only">Duration</label>
+                                    <select name="duration" class="form-control">
+                                        <option selected="true" disabled="true">Duration(All)</option>
+                                        {% for key, value in duration_of_job.items %}
+                                            <option value="{{ key }}" {% if key == values.duration %} selected {% endif %}>{{ value }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="sr-only">Developer Level</label>
+                                    <select name="developer_level" class="form-control">
+                                        <option selected="true" disabled="true">Developer Level(All)</option>
+                                        {% for key, value in developerlevel.items %}
+                                            <option value="{{ key }}" {% if key == values.developer_level %} selected {% endif %}>{{ value }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="sr-only">Location Of Job</label>
+                                    <select name="job_location" class="form-control">
+                                        <option selected="true" disabled="true">Location Of Job(All)</option>
+                                        {% for key, value in location_of_job.items %}
+                                            <option value="{{ key }}" {% if key == values.job_location %} selected {% endif %}>{{ value }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-12 mb-3">
+                                    <label for="sr-only">Skills</label>
+                                    <input type="text" name="skills" id="skills" class="form-control" placeholder="Skills (HTML, CSS, JavaScript)" value="{{ values.skills }}">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

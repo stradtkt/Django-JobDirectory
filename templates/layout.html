@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/now-ui-kit.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
@@ -76,6 +77,52 @@
 </nav>
 
     {% block content %} {% endblock %}
+
+<footer id="site-footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-4 footer-box">
+                <h1 class="text-center">Job Directory</h1>
+                <p class="text-center">&copy; Webkit Development Systems, 2020</p>
+                <p class="text-center lead">
+                    <a href="https://github.com/stradtkt"><i class="fab fa-github-square"></i></a>
+                    <a href="https://www.linkedin.com/in/kevin-stradtman-96b289146/"><i class="fab fa-linkedin"></i></a>
+                </p>
+            </div>
+            <div class="col-12 col-md-2">
+                <ul class="text-center footer-menu">
+                    <h4>Main Links</h4>
+                {% if 'id' not in request.session %}
+                    {% if 'login' in request.path %}
+                        <li class="nav-item active">
+                    {% else %}
+                        <li class="nav-item">
+                    {% endif %}
+                        <a href="{% url 'login' %}" class="nav-link">Login</a>
+                    </li>
+                    {% if 'register' in request.path %}
+                        <li class="nav-item active">
+                    {% else %}
+                        <li class="nav-item">
+                    {% endif %}
+                        <a href="{% url 'register' %}" class="nav-link">Register</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a href="javascript:{document.getElementById('logout').submit()}" class="nav-link">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </a>
+                        <form action="{% url 'logout' %}" id="logout" method="post">
+                            {% csrf_token %}
+                            <input type="hidden">
+                        </form>
+                    </li>
+                {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
 
     <script src="{% static 'assets/js/core/jquery.min.js' %}"></script>
     <script src="{% static 'assets/js/core/popper.min.js' %}"></script>

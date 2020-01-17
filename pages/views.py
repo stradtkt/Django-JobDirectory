@@ -4,7 +4,7 @@ from directory.models import Directory
 def index(request):
     jobs = Directory.objects.all().order_by('-created')[0:3]
     context = {
-        "jobs": jobs
+        "jobs": jobs,
     }
     return render(request, 'pages/index.html', context)
 

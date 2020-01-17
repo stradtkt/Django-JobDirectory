@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0dbeae40-9eb6-42fd-9d0b-6fc748fcb5df" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Kevin_Stradtman.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/directory/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/directory/choices.py" beforeDir="false" afterPath="$PROJECT_DIR$/directory/choices.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/directory/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/directory/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/directory/directory.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/directory/directory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +91,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579097031224</updated>
-      <workItem from="1579097132979" duration="30131000" />
+      <workItem from="1579097132979" duration="34949000" />
+      <workItem from="1579266649460" duration="11758000" />
     </task>
     <servers />
   </component>
@@ -92,25 +100,29 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1579203930138">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1579239193170">
+      <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1579120517480" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1579239193170" />
     <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579203930138" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1579203930138">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1579239193170">
+      <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1579120517479" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1579239193170" />
     <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579203930138" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1579203930137">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1579239193170">
+      <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1579120517478" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1579239193170" />
     <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579203930137" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1579203930138">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1579239193170">
+      <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1579120517479" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1579239193170" />
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579203930138" />
+    <state x="2022" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1579266660020">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2022" y="345" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1579266660020" />
   </component>
 </project>
